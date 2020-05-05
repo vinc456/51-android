@@ -8658,3 +8658,10 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="f003", MODE="0666", GROUP="plugdev"
 
 #Atten Electronics / Siglent Technologies 
 SUBSYSTEM=="usb", ATTR{idVendor}=="f4ec", MODE="0666", GROUP="plugdev"
+
+# Fix to Adb and Android Studio not detecting Motorola Z2 Play Phone
+# https://stackoverflow.com/questions/31624721/adb-and-android-studio-not-detecting-yuphoria
+# To set up device detection on Ubuntu Linux for the Motorola Z2 Play Phone
+# as per https://askubuntu.com/questions/863587/adb-device-list-doesnt-show-phone
+SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", MODE="0666", GROUP="plugdev"
+
